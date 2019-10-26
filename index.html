@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vocalist App</title>
+  </head>
+  <body>
+    <div class="app">
+      <h1>📝MyVocabularyList</h1>
+      <form class="app__form">
+        <div class="">
+          <label for="word">Word</label>
+          <input type="text" class="app__word" />
+        </div>
+        <div class="">
+          <label for="definition">Definition</label>
+          <input type="text" class="app__def" />
+        </div>
+        <input type="submit" value="Add" />
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Word</th>
+            <th>Definition</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="app__voca-list"></tbody>
+      </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
