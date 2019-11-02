@@ -69,3 +69,9 @@ mark {
   height: 24px;
   width: 48px;
 }
+
+@media screen and (max-width: 768px) {
+  .btns {
+    width: 100%;
+  }
+}
