@@ -17,9 +17,9 @@ class UI {
     const row = document.createElement("tr");
 
     row.innerHTML = `
-    <td>${voca.word}</td>
-    <td>${voca.definition}</td>
-    <td><a href="#" class="delete">X</a></td>
+    <td class="word">${voca.word}</td>
+    <td class="def">${voca.definition}</td>
+    <td><a href="#" class="delete">❌</a></td>
     `;
 
     list.appendChild(row);
@@ -96,7 +96,7 @@ document.querySelector(".app__form").addEventListener("submit", e => {
 
   //Validate
   if (word === "" || definition === "") {
-    UI.showAlert("Please fill in all the fields");
+    UI.showAlert("Please fill in all the fields", "warning");
   } else {
     //Instatiate
     const voca = new Voca(word, definition);
@@ -129,4 +129,18 @@ document.querySelector(".app__voca-list").addEventListener("click", e => {
 
   //Show success message
   UI.showAlert("Book Removed", "success");
+});
+
+document.querySelector(".word-btn").addEventListener("click", () => {
+  const word = document.querySelectorAll(".word");
+  for (let i = 0; i < word.length; i++) {
+    word[i].classList.toggle("hide");
+  }
+});
+
+document.querySelector(".def-btn").addEventListener("click", () => {
+  const def = document.querySelectorAll(".def");
+  for (let i = 0; i < def.length; i++) {
+    def[i].classList.toggle("hide");
+  }
 });

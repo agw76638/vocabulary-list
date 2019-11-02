@@ -4,22 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Vocalist App</title>
   </head>
   <body>
     <div class="app">
-      <h1>📝MyVocabularyList</h1>
+      <h1>📝My<mark>Vocabulary</mark>List</h1>
       <form class="app__form">
-        <div class="">
+        <div class="form-group">
           <label for="word">Word</label>
-          <input type="text" class="app__word" />
+          <input type="text" class="app__word" autocomplete="off" />
         </div>
-        <div class="">
+        <div class="form-group">
           <label for="definition">Definition</label>
-          <input type="text" class="app__def" />
+          <input type="text" class="app__def" autocomplete="off" />
         </div>
-        <input type="submit" value="Add" />
+        <input type="submit" value="Add" class="form-btn" />
       </form>
+      <div class="btns">
+        <button class="word-btn">word</button>
+        <button class="def-btn">def</button>
+      </div>
       <table>
         <thead>
           <tr>
