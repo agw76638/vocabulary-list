@@ -109,7 +109,7 @@ document.querySelector(".app__form").addEventListener("submit", e => {
     Store.addVoca(voca);
 
     //Show success message
-    UI.showAlert("Book Added", "success");
+    UI.showAlert("Added", "success");
 
     //Clear fields
     UI.clearFields();
@@ -128,7 +128,7 @@ document.querySelector(".app__voca-list").addEventListener("click", e => {
   );
 
   //Show success message
-  UI.showAlert("Book Removed", "success");
+  UI.showAlert("Removed", "success");
 });
 
 document.querySelector(".word-btn").addEventListener("click", () => {
