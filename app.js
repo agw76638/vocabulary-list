@@ -131,16 +131,36 @@ document.querySelector(".app__voca-list").addEventListener("click", e => {
   UI.showAlert("Removed", "success");
 });
 
-document.querySelector(".word-btn").addEventListener("click", () => {
+let e1 = true;
+let e2 = true;
+
+const hideWord = document.querySelector(".hide-word");
+const hideDef = document.querySelector(".hide-def");
+
+hideWord.addEventListener("click", () => {
   const word = document.querySelectorAll(".word");
   for (let i = 0; i < word.length; i++) {
     word[i].classList.toggle("hide");
   }
+  if (e1 === true) {
+    e1 = false;
+    hideWord.innerText = "show";
+  } else {
+    e1 = true;
+    hideWord.innerText = "hide";
+  }
 });
 
-document.querySelector(".def-btn").addEventListener("click", () => {
+hideDef.addEventListener("click", () => {
   const def = document.querySelectorAll(".def");
   for (let i = 0; i < def.length; i++) {
     def[i].classList.toggle("hide");
+  }
+  if (e2 === true) {
+    e2 = false;
+    hideDef.innerText = "show";
+  } else {
+    e2 = true;
+    hideDef.innerText = "hide";
   }
 });

@@ -1,5 +1,6 @@
 body {
-  background: #7efff5;
+  background: #67e6dc;
+  font-family: sans-serif;
 }
 
 .app {
@@ -57,11 +58,10 @@ mark {
   width: 50%;
   display: flex;
   justify-content: space-between;
+  position: sticky;
 }
 
-.word-btn,
-.def-btn {
-  position: sticky;
+.btns button {
   background: #4b4b4b;
   color: white;
   border: none;
